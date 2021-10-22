@@ -1,0 +1,26 @@
+.section-services {
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+
+  @include respond(tab-port) {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+  }
+
+  @include respond(phone) {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+}
+
+.section-about {
+  padding-bottom: 10rem;
+
+  @include respond(tab-port) {
+    padding-bottom: 8rem;
+  }
+
+  @include respond(phone) {
+    padding-bottom: 5rem;
+  }
+}
