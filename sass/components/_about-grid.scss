@@ -28,7 +28,7 @@
     &--composition {
       position: relative;
       z-index: 1;
-      transition: 0.3s;
+      transition: transform 0.3s;
 
       & figcaption {
         position: absolute;

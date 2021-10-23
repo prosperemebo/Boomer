@@ -4,9 +4,19 @@
       rgba($color-secondary, 0.8),
       rgba($color-secondary, 0.8)
     ),
-    url('/assets/images/hero.jpg');
+    url('/assets/images/hero-sm.jpg');
   background-size: cover;
   background-position: center;
+
+  @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em),
+    only screen and (min-width: 125%),
+    only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em) {
+    background-image: linear-gradient(
+        rgba($color-secondary, 0.8),
+        rgba($color-secondary, 0.8)
+      ),
+      url('/assets/images/hero.jpg');
+  }
 
   &__logo-box {
     position: absolute;

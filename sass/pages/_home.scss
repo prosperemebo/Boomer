@@ -24,3 +24,37 @@
     padding-bottom: 5rem;
   }
 }
+
+.section-team {
+  background-image: linear-gradient(
+      rgba($color-secondary, 0.8),
+      rgba($color-secondary, 0.8)
+    ),
+    url('/assets/images/teambg-sm.jpg');
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 10rem;
+  padding-top: 10rem;
+  padding-bottom: 12rem;
+  color: $color-grey-3;
+
+  @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em),
+    only screen and (min-width: 125%),
+    only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em) {
+    background-image: linear-gradient(
+        rgba($color-secondary, 0.8),
+        rgba($color-secondary, 0.8)
+      ),
+      url('/assets/images/teambg.jpg');
+  }
+
+  @include respond(tab-port) {
+    padding-top: 8rem;
+    padding-bottom: 10rem;
+  }
+
+  @include respond(phone) {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+}
