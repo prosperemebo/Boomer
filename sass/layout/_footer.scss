@@ -1,0 +1,103 @@
+.footer {
+  background-image: linear-gradient(
+      rgba($color-secondary, 0.8),
+      rgba($color-secondary, 0.8)
+    ),
+    url('/assets/images/footerbg-sm.jpg');
+  background-size: cover;
+  background-position: center;
+  padding-top: 10rem;
+  color: $color-grey-3;
+
+  @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em),
+    only screen and (min-width: 125%),
+    only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em) {
+    background-image: linear-gradient(
+        rgba($color-secondary, 0.8),
+        rgba($color-secondary, 0.8)
+      ),
+      url('/assets/images/footerbg.jpg');
+  }
+
+  @include respond(tab-port) {
+    padding-top: 8rem;
+  }
+
+  @include respond(phone) {
+    padding-top: 5rem;
+  }
+
+  &__content {
+    width: 60%;
+
+    @include respond(tab-land) {
+      width: 80%;
+    }
+
+    @include respond(phone) {
+      width: 100%;
+    }
+  }
+
+  &__info {
+    display: flex;
+    align-items: center;
+
+    @include respond(tab-port) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    &--msg {
+      & h2 {
+        font-size: 2.3rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin-bottom: 0.5rem;
+
+        @include respond(tab-port) {
+          margin-bottom: 0rem;
+        }
+      }
+
+      & a {
+        text-decoration: none;
+        font-size: 2rem;
+        color: $color-primary;
+      }
+
+      &:not(:last-child) {
+        margin-right: 5rem;
+
+        @include respond(tab-port) {
+          margin-right: 0rem;
+          margin-bottom: 2rem;
+        }
+      }
+    }
+  }
+
+  & .foot {
+    border-top: 1px solid $color-grey-3;
+
+    & .content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 2rem 0;
+
+      @include respond(phone) {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    & p {
+      margin-bottom: 0;
+
+      @include respond(phone) {
+        margin-bottom: 0.5rem;
+      }
+    }
+  }
+}

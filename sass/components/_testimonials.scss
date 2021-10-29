@@ -1,0 +1,76 @@
+.testimonials {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  & .testimonial {
+    border: 1px solid $color-grey-2;
+    margin-left: $padding-left-right-big;
+    margin-right: $padding-left-right-big;
+    padding: $padding-left-right-big $padding-left-right-mid;
+    width: 100rem;
+    height: 35rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+
+    @include respond(tab-land) {
+      padding: $padding-left-right-big $padding-left-right-small;
+      width: 70rem;
+      height: 40rem;
+    }
+
+    @include respond(tab-port) {
+      padding: $padding-left-right-big 3rem;
+      width: 100%;
+      height: 40rem;
+    }
+
+    & .content {
+      transition: opacity 200ms linear;
+
+      &.hide {
+        opacity: 0;
+      }
+    }
+
+    & p {
+      font-size: 2rem;
+      font-weight: 300;
+      color: $color-secondary;
+    }
+
+    & h3 {
+      font-size: 1.8rem;
+      color: $color-grey-1;
+    }
+  }
+
+  & .controls {
+    & button {
+      background: none;
+      font-size: 2rem;
+      border: none;
+      padding: 1rem;
+      cursor: pointer;
+      border-radius: 50%;
+      transition: transform 0.3s ease, background-color 0.3s ease;
+      line-height: 0;
+
+      &:hover {
+        transform: scale(1.1);
+        background-color: rgba($color-grey-2, 0.3);
+      }
+
+      &:active {
+        transform: scale(0.93);
+        background-color: rgba($color-grey-2, 0.3);
+      }
+
+      &:not(:last-child) {
+        margin-right: 2rem;
+      }
+    }
+  }
+}
