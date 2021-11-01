@@ -217,3 +217,46 @@ tlFooter.fromTo(
   { opacity: 0 },
   { opacity: 1, duration: 1 }
 );
+
+// CONTACT POPUP
+
+const tlPopup = gsap.timeline({
+  defaults: {
+    ease: 'power1.out',
+  },
+});
+
+tlPopup.to('.contact-popup', { x: '0%', duration: 1 }), '+=2';
+tlPopup.fromTo(
+  '.contact-popup .content',
+  { opacity: 0, x: '-30%' },
+  { opacity: 1, duration: 1, x: '0' },
+  '-=1'
+);
+tlPopup.fromTo(
+  '.contact-popup .content',
+  { opacity: 0 },
+  { opacity: 1, duration: 1 },
+  '-=1.8'
+);
+tlPopup.reverse();
+
+const openContactModal = (open) => {
+  tlPopup.play();
+};
+
+const closeContactModal = () => {
+  tlPopup.reverse();
+};
+
+document
+  .querySelector('#headerPopupBtn')
+  .addEventListener('click', openContactModal);
+
+document
+  .querySelector('#footerPopupBtn')
+  .addEventListener('click', openContactModal);
+
+document
+  .querySelector('#close-contact-modal')
+  .addEventListener('click', closeContactModal);

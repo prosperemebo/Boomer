@@ -68,8 +68,33 @@
     <div class="slide-in slider1"></div>
     <div class="slide-in slider2"></div>
     <div class="slide-in slider3"></div>
-    <!-- <div class="sliders">
-    </div> -->
+
+    <section class="contact-popup">
+      <button class="close-btn u-color-white" id="close-contact-modal">
+        <span class="lnr lnr-cross"></span>
+      </button>
+      <form class="content u-margin-top-huge">
+        <div class="u-margin-bottom-medium">
+          <h2 class="heading-secondary u-color-white">
+            <span class="heading-secondary--sub anim-text">
+              We'd love to hear from you.</span
+            >
+            <span class="heading-secondary--main anim-text">Contact Us</span>
+          </h2>
+        </div>
+        <div class="input-group">
+          <input type="text" class="input" placeholder="Name" />
+          <input type="text" class="input" placeholder="Email" />
+          <textarea
+            type="text"
+            class="input msg"
+            placeholder="Your Message"
+          ></textarea>
+        </div>
+        <button class="btn btn-solid u-margin-bottom-big">Send</button>
+      </form>
+    </section>
+
     <header class="header">
       <div class="header__logo-box">
         <img src="/assets/images/logo.png" alt="Boomer." class="header__logo" />
@@ -86,9 +111,12 @@
             Creative ideas wisely melted together to make your brand stand out
           </span>
         </h1>
-        <a href="#" class="btn header__text-items">Contact Us</a>
+        <button id="headerPopupBtn" class="btn header__text-items">
+          Contact Us
+        </button>
       </div>
     </header>
+
     <main>
       <section class="section-services u-center-section">
         <div class="u-margin-bottom-medium">
@@ -173,6 +201,7 @@
           </div>
         </div>
       </section>
+
       <section class="section-about u-center-section">
         <div class="about-grid">
           <div class="cell cell--desc">
@@ -248,6 +277,7 @@
           </figure>
         </div>
       </section>
+
       <section class="section-team u-center-section">
         <div class="u-margin-bottom-medium">
           <h2 class="heading-secondary u-color-white">
@@ -290,6 +320,7 @@
           </figure>
         </div>
       </section>
+
       <section class="section-testimonials u-center-section">
         <div class="u-margin-bottom-big">
           <h2 class="heading-secondary">
@@ -337,7 +368,9 @@
               >Ready to make your brand boom?</span
             >
           </h2>
-          <a href="#" class="btn anim-text">Contact Us Now</a>
+          <button id="footerPopupBtn" class="btn anim-text">
+            Contact Us Now
+          </button>
         </div>
         <div class="footer__info">
           <div class="footer__info--msg anim-text">

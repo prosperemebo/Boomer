@@ -10,6 +10,7 @@
   font-size: $default-font-size;
   color: $color-primary;
   cursor: pointer;
+  background-color: transparent;
   position: relative;
 
   @include respond(phone) {
@@ -38,6 +39,14 @@
     transform: translate(-50%, 0%);
     z-index: -1;
     transition: all 0.4s;
+  }
+
+  &.btn-solid {
+    color: $color-secondary;
+
+    &::after {
+      height: 100%;
+    }
   }
 
   &:active,
