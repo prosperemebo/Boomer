@@ -52,7 +52,24 @@
         </ul>
       </nav>
     </div> -->
-
+    <div class="intro">
+      <div class="intro--text">
+        <h1 class="hide">
+          <span class="text">Outside</span>
+        </h1>
+        <h1 class="hide">
+          <span class="text">The Creative</span>
+        </h1>
+        <h1 class="hide">
+          <span class="text">Box.</span>
+        </h1>
+      </div>
+    </div>
+    <div class="slide-in slider1"></div>
+    <div class="slide-in slider2"></div>
+    <div class="slide-in slider3"></div>
+    <!-- <div class="sliders">
+    </div> -->
     <header class="header">
       <div class="header__logo-box">
         <img src="/assets/images/logo.png" alt="Boomer." class="header__logo" />
@@ -64,20 +81,22 @@
             src="/assets/gifs/boom.gif"
             alt="Boom"
           />
-          <span class="heading-primary--main">Boomer.</span>
-          <span class="heading-primary--sub">
+          <span class="heading-primary--main header__text-items">Boomer.</span>
+          <span class="heading-primary--sub header__text-items">
             Creative ideas wisely melted together to make your brand stand out
           </span>
         </h1>
-        <a href="#" class="btn">Contact Us</a>
+        <a href="#" class="btn header__text-items">Contact Us</a>
       </div>
     </header>
     <main>
       <section class="section-services u-center-section">
         <div class="u-margin-bottom-medium">
           <h2 class="heading-secondary">
-            <span class="heading-secondary--sub">What we do in a nutshell</span>
-            <span class="heading-secondary--main">Services</span>
+            <span class="heading-secondary--sub text"
+              >What we do in a nutshell</span
+            >
+            <span class="heading-secondary--main text">Services</span>
           </h2>
         </div>
 
@@ -159,13 +178,19 @@
           <div class="cell cell--desc">
             <div class="u-margin-bottom-small">
               <h2 class="heading-secondary">
-                <span class="heading-secondary--sub">
-                  Thinking different, that’s what we do!</span
-                >
-                <span class="heading-secondary--main">Approach</span>
+                <span class="hide">
+                  <span class="heading-secondary--sub anim-text">
+                    Thinking different, that’s what we do!</span
+                  >
+                </span>
+                <span class="hide">
+                  <span class="heading-secondary--main anim-text"
+                    >Approach</span
+                  >
+                </span>
               </h2>
             </div>
-            <p class="paragraph">
+            <p class="paragraph anim-text">
               We are designers, developers, writers, thinkers, and problem
               solvers. Small enough to be simple and fast, but big enough to
               deliver your project scope at the pace you need. You can learn
@@ -174,6 +199,7 @@
             </p>
           </div>
           <figure class="cell cell--composition">
+            <div class="overlay"></div>
             <img
               src="/assets/images/experience.jpg"
               alt="Composition Image"
@@ -189,6 +215,7 @@
             </figcaption>
           </figure>
           <figure class="cell cell--composition">
+            <div class="overlay"></div>
             <img
               src="/assets/images/dedication.jpg"
               alt="Composition Image"
@@ -204,6 +231,7 @@
             </figcaption>
           </figure>
           <figure class="cell cell--composition">
+            <div class="overlay"></div>
             <img
               src="/assets/images/smartwork.jpg"
               alt="Composition Image"
@@ -223,10 +251,10 @@
       <section class="section-team u-center-section">
         <div class="u-margin-bottom-medium">
           <h2 class="heading-secondary u-color-white">
-            <span class="heading-secondary--sub"
+            <span class="heading-secondary--sub anim-text"
               >Meet who’s behind the desk!</span
             >
-            <span class="heading-secondary--main">Our Team</span>
+            <span class="heading-secondary--main anim-text">Our Team</span>
           </h2>
         </div>
         <div class="team u-margin-top-small">
@@ -265,10 +293,10 @@
       <section class="section-testimonials u-center-section">
         <div class="u-margin-bottom-big">
           <h2 class="heading-secondary">
-            <span class="heading-secondary--sub">
+            <span class="heading-secondary--sub anim-text">
               What our amazing clients say</span
             >
-            <span class="heading-secondary--main">Testimonials</span>
+            <span class="heading-secondary--main anim-text">Testimonials</span>
           </h2>
         </div>
         <div class="testimonials">
@@ -302,19 +330,21 @@
               u-color-white u-margin-bottom-small
             "
           >
-            <span class="heading-secondary--sub">Let’s Work Together</span>
-            <span class="heading-secondary--main"
+            <span class="heading-secondary--sub text anim-text"
+              >Let’s Work Together</span
+            >
+            <span class="heading-secondary--main text anim-text"
               >Ready to make your brand boom?</span
             >
           </h2>
-          <a href="#" class="btn">Contact Us Now</a>
+          <a href="#" class="btn anim-text">Contact Us Now</a>
         </div>
         <div class="footer__info">
-          <div class="footer__info--msg">
+          <div class="footer__info--msg anim-text">
             <h2>Phone</h2>
             <a href="tel:+234 904 6042 298">+234 904 6042 298</a>
           </div>
-          <div class="footer__info--msg">
+          <div class="footer__info--msg anim-text">
             <h2>Email</h2>
             <a href="mailto:hello@boomer.com">hello@boomer.com</a>
           </div>
@@ -327,7 +357,17 @@
         </div>
       </div>
     </footer>
-
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"
+      integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ=="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/ScrollTrigger.min.js"
+      integrity="sha512-CPA5LMoJI/a5HkSIAKcBtFXe4gqGjPUL2ExF/3PmhrrHI17wod9xOqqF+0WZQRKIIq0KwF8oG5BaiWobtrke3A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
     <script src="/js/main.js"></script>
   </body>
 </html>

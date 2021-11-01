@@ -12,6 +12,10 @@
   cursor: pointer;
   position: relative;
 
+  @include respond(phone) {
+    padding: 1rem 4rem;
+  }
+
   &:hover {
     transform: translateY(-0.3px);
     box-shadow: 0 1rem 2rem rgba($color-secondary, 0.2);

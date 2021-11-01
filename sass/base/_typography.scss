@@ -56,9 +56,10 @@ body {
   &--sub {
     display: block;
     font-size: 2rem;
-    font-weight: 100;
+    font-weight: 200;
     text-transform: capitalize;
     font-family: $secondary-font;
+    color: rgba($color-grey-3, 0.8);
 
     @include respond(phone) {
       line-height: normal;
@@ -73,6 +74,7 @@ body {
     .heading-primary--gif {
       transform: translate(-60%, -50%) scale(1);
       opacity: 1;
+      animation: hideGif 0.1s linear 5s forwards;
 
       @include respond(tab-port) {
         transform: translate(60%, -90%) scale(1);
@@ -101,6 +103,7 @@ body {
     font-size: 3.5rem;
     letter-spacing: 1rem;
     line-height: normal;
+    display: block;
 
     @include respond(tab-port) {
       font-size: 3rem;

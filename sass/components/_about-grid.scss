@@ -30,6 +30,43 @@
       z-index: 1;
       transition: transform 0.3s;
 
+      & .overlay {
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform-origin: right center;
+        background-color: $color-grey-3;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+      }
+
+      & .composition--img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        display: block;
+      }
+
+      & .composition--gif {
+        width: 15rem;
+        position: absolute;
+        top: 0;
+        transform: translate(-0%, -20%) scale(1);
+        opacity: 0;
+        transform-origin: bottom;
+        transition: opacity 0.5s 0.2s, transform 0.5s 0.2s;
+        z-index: 10;
+
+        &--right {
+          right: 0;
+        }
+
+        &--left {
+          left: 0;
+        }
+      }
+
       & figcaption {
         position: absolute;
         top: 0;
@@ -59,6 +96,7 @@
 
         .composition--gif {
           opacity: 1;
+          animation: hideGif 0.1s linear 5s forwards;
 
           &--right {
             transform: translate(40%, -30%) scale(1);
@@ -76,32 +114,6 @@
             }
           }
         }
-      }
-    }
-
-    & .composition--img {
-      object-fit: cover;
-      width: 100%;
-      height: 100%;
-      display: block;
-    }
-
-    & .composition--gif {
-      width: 15rem;
-      position: absolute;
-      top: 0;
-      transform: translate(-0%, -20%) scale(1);
-      opacity: 0;
-      transform-origin: bottom;
-      transition: opacity 0.5s 0.2s, transform 0.5s 0.2s;
-      z-index: 10;
-
-      &--right {
-        right: 0;
-      }
-
-      &--left {
-        left: 0;
       }
     }
   }

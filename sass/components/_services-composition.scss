@@ -17,7 +17,7 @@
     height: 25rem;
     border: 1px solid $color-grey-2;
     position: relative;
-    transition: background-color 0.2s, transform 0.3s;
+    transition: background-color 0.2s;
 
     &__figure {
       width: 6rem;
@@ -51,11 +51,11 @@
     }
 
     &:hover {
-      transform: scale(1.01);
       background-color: rgba($color-grey-2, 0.1);
 
       .composition__gif {
         opacity: 1;
+        animation: hideGif 0.1s linear 5s forwards;
 
         &--right {
           transform: translate(60%, -30%) scale(1);

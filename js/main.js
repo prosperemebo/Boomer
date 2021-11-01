@@ -97,3 +97,123 @@ nextTestimonial.addEventListener('click', () => {
 });
 
 setTestimonial(index);
+
+// ANIMATIONS
+gsap.registerPlugin(ScrollTrigger);
+
+ScrollTrigger.defaults({
+  // markers: true,
+  toggleActions: 'restart none none reverse',
+  start: 'top 90%',
+});
+
+const slideInUp = [
+  { opacity: 0, y: '150px' },
+  { opacity: 1, duration: 1.5, y: '0', stagger: 0.25 },
+];
+
+const headingSecondaryAnimation = {
+  y: 0,
+  duration: 1,
+  stagger: 0.15,
+};
+
+const tlHeader = gsap.timeline({
+  defaults: {
+    ease: 'power1.out',
+  },
+});
+
+tlHeader.to('.intro .text', { y: '0%', duration: 1, stagger: 0.25 });
+tlHeader.to('.slider1', { y: '-100%', duration: 2, delay: 0.5 });
+tlHeader.to('.slider2', { y: '-100%', duration: 1.6 }, '-=1.8');
+tlHeader.to('.slider3', { y: '-100%', duration: 2 }, '-=1.8');
+tlHeader.to('.intro', { y: '-100%', duration: 1 }, '-=1.5');
+tlHeader.fromTo(
+  '.header__logo-box img',
+  { opacity: 0, x: '-50px' },
+  { opacity: 1, duration: 1.5, x: '0' },
+  '-=.5'
+);
+tlHeader.fromTo('.header__text-items', ...slideInUp, '-=1.5');
+
+const tlServices = gsap.timeline({
+  defaults: {
+    ease: Power1.easeOut,
+  },
+  scrollTrigger: {
+    trigger: '.section-services',
+  },
+});
+
+tlServices.fromTo('.section-services .heading-secondary .text', ...slideInUp);
+tlServices.fromTo('.composition', ...slideInUp, '-=1.6');
+
+const tlAbout = gsap.timeline({
+  defaults: {
+    ease: 'power1.easeOut',
+  },
+  scrollTrigger: {
+    trigger: '.section-about',
+  },
+});
+
+tlAbout.fromTo('.section-about .anim-text', ...slideInUp);
+
+tlAbout
+  .set('.section-about .cell--composition', {
+    transformOrigin: 'left center',
+  })
+  .to(
+    '.section-about .cell--composition .overlay',
+    {
+      width: '0%',
+      duration: 1.5,
+      stagger: 0.25,
+    },
+    '-=1'
+  );
+
+const tlTeam = gsap.timeline({
+  defaults: {
+    ease: 'power1.easeIn',
+  },
+  scrollTrigger: {
+    trigger: '.section-team',
+  },
+});
+
+tlTeam.fromTo('.section-team .anim-text', ...slideInUp);
+tlTeam.fromTo('.section-team .member', ...slideInUp, '-=1.5');
+
+const tlTestimonial = gsap.timeline({
+  defaults: {
+    ease: 'power1.easeIn',
+  },
+  scrollTrigger: {
+    trigger: '.section-testimonials',
+  },
+});
+
+tlTestimonial.fromTo('.section-testimonials .anim-text', ...slideInUp);
+tlTestimonial.fromTo(
+  '.section-testimonials .testimonials',
+  ...slideInUp,
+  '-=1.5'
+);
+
+const tlFooter = gsap.timeline({
+  defaults: {
+    ease: 'power1.easeIn',
+  },
+  scrollTrigger: {
+    trigger: '.footer',
+  },
+});
+
+tlFooter.fromTo('.footer .anim-text', ...slideInUp);
+tlFooter.fromTo(
+  '.footer .foot .content',
+  { opacity: 0 },
+  { opacity: 1, duration: 1 }
+);
