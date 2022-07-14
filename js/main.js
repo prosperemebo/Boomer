@@ -3,6 +3,9 @@ const testimonialText = document.querySelector('#testimonialText');
 const testifierText = document.querySelector('#testifier');
 const prevTestimonial = document.querySelector('#prev-testimonial');
 const nextTestimonial = document.querySelector('#next-testimonial');
+const headerPopupButton = document.querySelector('#headerPopupBtn');
+const footerPopupBtn = document.querySelector('#footerPopupBtn');
+const footerPopupButton = document.querySelector('#close-contact-modal');
 
 const testimonialData = [
   {
@@ -155,6 +158,10 @@ const tlAbout = gsap.timeline({
   },
   scrollTrigger: {
     trigger: '.section-about',
+    markers: true,
+    start: 'top 90%',
+    end: 'bottom 90%',
+    scrub: true,
   },
 });
 
@@ -249,14 +256,6 @@ const closeContactModal = () => {
   tlPopup.reverse();
 };
 
-document
-  .querySelector('#headerPopupBtn')
-  .addEventListener('click', openContactModal);
-
-document
-  .querySelector('#footerPopupBtn')
-  .addEventListener('click', openContactModal);
-
-document
-  .querySelector('#close-contact-modal')
-  .addEventListener('click', closeContactModal);
+headerPopupButton.addEventListener('click', openContactModal);
+footerPopupBtn.addEventListener('click', openContactModal);
+footerPopupButton.addEventListener('click', closeContactModal);
