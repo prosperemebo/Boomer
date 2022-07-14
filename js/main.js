@@ -158,7 +158,7 @@ const tlAbout = gsap.timeline({
   },
   scrollTrigger: {
     trigger: '.section-about',
-    markers: true,
+    // markers: true,
     start: 'top 90%',
     end: 'bottom 90%',
     scrub: true,
